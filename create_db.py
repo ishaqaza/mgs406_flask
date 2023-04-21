@@ -1,9 +1,11 @@
 import sqlite3
-conn = sqlite3.connect('database.db')
 
+conn = sqlite3.connect('database.db')
 print("Opened database successfully")
 
-conn.execute('CREATE TABLE students (name TEXT, addr TEXT, city TEXT, zip TEXT)')
+cmd =('CREATE TABLE students (name TEXT, addr TEXT, city TEXT, zip TEXT)')
+
+conn.execute(cmd)
 
 print("Table created successfully")
 
